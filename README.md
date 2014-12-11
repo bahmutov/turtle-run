@@ -6,6 +6,8 @@ Uses [connect-slow](https://github.com/bahmutov/connect-slow) internally.
 
 Install `npm install -g turtle-run`
 
+Run `turtle-run <config json file | turtle.json by default>`
+
 Create `turtle.json` local config file. Example:
 
 ```json

@@ -8,7 +8,7 @@ var http = require('http'),
 
 var pkg = require(path.join(__dirname, 'package.json'));
 
-var configFilename = 'turtles.json';
+var configFilename = process.argv[2] || 'turtles.json';
 console.log('looking for config file', configFilename);
 
 if (!fs.existsSync(configFilename)) {
