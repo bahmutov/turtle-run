@@ -1,5 +1,9 @@
 # turtle-run
 
+Read [Give browser a chance](http://bahmutov.calepin.co/give-browser-a-chance.html).
+
+Uses [connect-slow](https://github.com/bahmutov/connect-slow) internally.
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2014
