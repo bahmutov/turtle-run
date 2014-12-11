@@ -4,6 +4,28 @@ Read [Give browser a chance](http://bahmutov.calepin.co/give-browser-a-chance.ht
 
 Uses [connect-slow](https://github.com/bahmutov/connect-slow) internally.
 
+Install `npm install -g turtle-run`
+
+Create `turtle.json` local config file. Example:
+
+```json
+{
+  "target": "http://localhost:3003",
+  "port": 8008,
+  "urls": {
+    ".js$": 2000,
+    "app.js": 2000,
+    ".html$": 1000
+  }
+}
+```
+
+Start *turtle-run* in the folder with *turtle.json*. The proxy watches the file and restarts on any changes.
+In the above case, the proxy will listen on local port 8008 and forward any requests to `http://localhost:3003`.
+Requests containing `.js` at the end will be delayed by 2 seconds. JavaScript file `app.js` will be delayed by
+4 seconds (2 seconds for every js file and 2 seconds because it matches `app.js`). HTML files will be delayed 
+by 1 second. All other requests will not be delayed.
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2014
