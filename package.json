@@ -1,0 +1,34 @@
+{
+  "name": "turtle-run",
+  "version": "0.0.0",
+  "description": "Http proxy for testing with per request delay",
+  "main": "index.js",
+  "bin": {
+    "turtle-run": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bahmutov/turtle-run.git"
+  },
+  "keywords": [
+    "http",
+    "proxy",
+    "testing",
+    "test",
+    "delay"
+  ],
+  "preferGlobal": true,
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/turtle-run/issues"
+  },
+  "homepage": "https://github.com/bahmutov/turtle-run",
+  "dependencies": {
+    "connect-slow": "0.2.1",
+    "http-proxy": "1.7.3"
+  }
+}
