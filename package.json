@@ -1,6 +1,6 @@
 {
   "name": "turtle-run",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Http proxy for testing with per request delay",
   "main": "index.js",
   "bin": {
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/bahmutov/turtle-run",
   "dependencies": {
     "connect-slow": "0.2.1",
-    "http-proxy": "1.7.3"
+    "http-proxy": "1.7.3",
+    "nodemon": "1.2.1"
   }
 }
