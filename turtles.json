@@ -1,6 +1,7 @@
 {
   "target": "http://localhost:3003",
   "port": 8008,
+  "debug": true,
   "urls": {
     ".js$": 2000,
     "app.js": 2000,

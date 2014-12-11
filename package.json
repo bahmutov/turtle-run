@@ -1,6 +1,6 @@
 {
   "name": "turtle-run",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Http proxy for testing with per request delay",
   "main": "index.js",
   "bin": {

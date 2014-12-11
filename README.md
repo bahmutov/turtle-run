@@ -14,6 +14,7 @@ Create `turtle.json` local config file. Example:
 {
   "target": "http://localhost:3003",
   "port": 8008,
+  "debug": true,
   "urls": {
     ".js$": 2000,
     "app.js": 2000,
@@ -27,6 +28,8 @@ In the above case, the proxy will listen on local port 8008 and forward any requ
 Requests containing `.js` at the end will be delayed by 2 seconds. JavaScript file `app.js` will be delayed by
 4 seconds (2 seconds for every js file and 2 seconds because it matches `app.js`). HTML files will be delayed 
 by 1 second. All other requests will not be delayed.
+
+`debug` flag tells proxy to output request information to console log.
 
 ### Small print
 

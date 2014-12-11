@@ -27,11 +27,16 @@ function startProxy() {
     var delay = config.urls[urlPattern];
     return slow({
       url: new RegExp(urlPattern),
-      delay: delay
+      delay: delay,
+      debug: config.debug
     });
   });
 
   server = http.createServer(function (req, res) {
+    if (config.debug) {
+      console.log(req.method, req.url);
+    }
+
     var toTarget = proxy.web.bind(proxy, req, res, {
       target: config.target
     });
