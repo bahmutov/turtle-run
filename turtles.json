@@ -4,7 +4,7 @@
   "debug": true,
   "urls": {
     ".js$": 2000,
-    "app.js": 2000,
-    ".html$": 1000
+    ".html$": 1000,
+    "app.js": { "response": 500 }
   }
 }

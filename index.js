@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 
+require('lazy-ass');
+var check = require('check-more-types');
+
 var http = require('http'),
   httpProxy = require('http-proxy'),
   slow = require('connect-slow'),
+  stop = require('connect-stop'),
   fs = require('fs'),
   path = require('path');
 
@@ -24,12 +28,25 @@ function startProxy() {
   var config = JSON.parse(fs.readFileSync(configFilename), 'utf-8');
 
   var slowDowns = Object.keys(config.urls).map(function (urlPattern) {
-    var delay = config.urls[urlPattern];
-    return slow({
-      url: new RegExp(urlPattern),
-      delay: delay,
-      debug: config.debug
-    });
+    var action = config.urls[urlPattern];
+    // 'app.js': 1000 -> delay request to app.js by 1 second
+    if (typeof action === 'number') {
+      return slow({
+        url: new RegExp(urlPattern),
+        delay: action,
+        debug: config.debug
+      });
+    }
+    // 'app.js': { response: 404 } -> respond to app.js with 404
+    if (typeof action === 'object') {
+      la(check.has(action, 'response'), 'url', urlPattern, 'action does not have response', action);
+      return stop({
+        url: new RegExp(urlPattern),
+        response: action.response,
+        debug: config.debug
+      });
+    }
+    la(false, 'do not know what to do for url', urlPattern);
   });
 
   server = http.createServer(function (req, res) {

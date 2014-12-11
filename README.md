@@ -2,7 +2,8 @@
 
 Read [Give browser a chance](http://bahmutov.calepin.co/give-browser-a-chance.html).
 
-Uses [connect-slow](https://github.com/bahmutov/connect-slow) internally.
+Uses [connect-slow](https://github.com/bahmutov/connect-slow) and 
+[connect-stop](https://github.com/bahmutov/connect-stop) internally.
 
 Install `npm install -g turtle-run`
 
@@ -18,7 +19,8 @@ Create `turtle.json` local config file. Example:
   "urls": {
     ".js$": 2000,
     "app.js": 2000,
-    ".html$": 1000
+    ".html$": 1000,
+    "foo.js$": { "response": 500 }
   }
 }
 ```
@@ -28,6 +30,8 @@ In the above case, the proxy will listen on local port 8008 and forward any requ
 Requests containing `.js` at the end will be delayed by 2 seconds. JavaScript file `app.js` will be delayed by
 4 seconds (2 seconds for every js file and 2 seconds because it matches `app.js`). HTML files will be delayed 
 by 1 second. All other requests will not be delayed.
+
+The proxy will also return code 500 for resource `foo.js`.
 
 `debug` flag tells proxy to output request information to console log.
 
