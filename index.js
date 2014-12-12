@@ -3,6 +3,8 @@
 require('lazy-ass');
 var check = require('check-more-types');
 
+require('./src/check-updates')();
+
 var http = require('http'),
   httpProxy = require('http-proxy'),
   slow = require('connect-slow'),

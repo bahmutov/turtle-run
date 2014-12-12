@@ -1,7 +1,7 @@
 {
   "name": "turtle-run",
   "description": "Http proxy for testing with per request delay",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bin": {
     "turtle-run": "./index.js"
@@ -17,7 +17,8 @@
     "connect-stop": "0.2.1",
     "http-proxy": "1.7.3",
     "lazy-ass": "0.5.3",
-    "nodemon": "1.2.1"
+    "nodemon": "1.2.1",
+    "update-notifier": "0.2.2"
   },
   "devDependencies": {
     "grunt": "0.4.5",
