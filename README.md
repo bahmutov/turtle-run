@@ -1,5 +1,22 @@
 # turtle-run
 
+> Http proxy for testing with per request delay and responses
+
+[![NPM][turtle-run-icon] ][turtle-run-url]
+
+[![Build status][turtle-run-ci-image] ][turtle-run-ci-url]
+[![dependencies][turtle-run-dependencies-image] ][turtle-run-dependencies-url]
+[![devdependencies][turtle-run-devdependencies-image] ][turtle-run-devdependencies-url]
+
+[turtle-run-icon]: https://nodei.co/npm/turtle-run.png?downloads=true
+[turtle-run-url]: https://npmjs.org/package/turtle-run
+[turtle-run-ci-image]: https://travis-ci.org/bahmutov/turtle-run.png?branch=master
+[turtle-run-ci-url]: https://travis-ci.org/bahmutov/turtle-run
+[turtle-run-dependencies-image]: https://david-dm.org/bahmutov/turtle-run.png
+[turtle-run-dependencies-url]: https://david-dm.org/bahmutov/turtle-run
+[turtle-run-devdependencies-image]: https://david-dm.org/bahmutov/turtle-run/dev-status.png
+[turtle-run-devdependencies-url]: https://david-dm.org/bahmutov/turtle-run#info=devDependencies
+
 Read [Give browser a chance](http://bahmutov.calepin.co/give-browser-a-chance.html).
 
 Uses [connect-slow](https://github.com/bahmutov/connect-slow) and 

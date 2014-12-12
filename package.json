@@ -1,32 +1,15 @@
 {
   "name": "turtle-run",
-  "version": "0.2.0",
   "description": "Http proxy for testing with per request delay",
-  "main": "index.js",
+  "version": "0.3.0",
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bin": {
     "turtle-run": "./index.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bahmutov/turtle-run.git"
-  },
-  "keywords": [
-    "http",
-    "proxy",
-    "testing",
-    "test",
-    "delay"
-  ],
-  "preferGlobal": true,
-  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahmutov/turtle-run/issues"
   },
-  "homepage": "https://github.com/bahmutov/turtle-run",
+  "contributors": [],
   "dependencies": {
     "check-more-types": "1.1.0",
     "check-types": "1.4.0",
@@ -35,5 +18,36 @@
     "http-proxy": "1.7.3",
     "lazy-ass": "0.5.3",
     "nodemon": "1.2.1"
+  },
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-deps-ok": "0.5.1",
+    "grunt-help": "0.4.1",
+    "grunt-nice-package": "0.9.2",
+    "grunt-readme": "0.4.5",
+    "matchdep": "0.3.0",
+    "pre-git": "0.1.1"
+  },
+  "engines": {
+    "node": "> 0.8"
+  },
+  "homepage": "https://github.com/bahmutov/turtle-run",
+  "keywords": [
+    "http",
+    "proxy",
+    "testing",
+    "test",
+    "delay"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bahmutov/turtle-run.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

@@ -87,7 +87,7 @@ nodemon.on('start', function () {
 }).on('quit', function () {
   server.close();
   proxy.close();
-}).on('restart', function (files) {
+}).on('restart', function () {
   console.log('restarting', pkg.name, 'on', configFilename, 'change');
 });
 
