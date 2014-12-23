@@ -17,7 +17,7 @@
 [turtle-run-devdependencies-image]: https://david-dm.org/bahmutov/turtle-run/dev-status.png
 [turtle-run-devdependencies-url]: https://david-dm.org/bahmutov/turtle-run#info=devDependencies
 
-Read [Robustness testing using proxies][http://bahmutov.calepin.co/robustness-testing-using-proxies.html]
+Read [Robustness testing using proxies](http://bahmutov.calepin.co/robustness-testing-using-proxies.html)
 and [Give browser a chance](http://bahmutov.calepin.co/give-browser-a-chance.html).
 
 Uses [connect-slow](https://github.com/bahmutov/connect-slow) and 
