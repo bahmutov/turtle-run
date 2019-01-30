@@ -57,7 +57,8 @@ function startProxy() {
     }
 
     var toTarget = proxy.web.bind(proxy, req, res, {
-      target: config.target
+      target: config.target,
+      secure: config.secure || true
     });
 
     var slowPyramid = slowDowns.reduce(function (prev, slowDown) {
